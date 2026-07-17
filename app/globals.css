@@ -61,3 +61,54 @@ button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-vis
 @media(max-width:700px){.workflow-gates{display:grid;grid-template-columns:1fr}.workflow-gates i{text-align:center}}
 
 .enforcement-summary>p{color:var(--muted);font-size:12px;line-height:1.5;margin:20px 0}.enforcement-summary button{margin-top:4px}.rules-help .shared-glossary,.query-help .shared-glossary{grid-column:1/-1;margin-top:6px}.query-help .shared-glossary{background:#fff;border-left-color:var(--teal)}
+
+/* Unified typography scale */
+body{
+  font-family:var(--font-geist-sans),ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:14px;
+  line-height:1.5;
+  text-rendering:optimizeLegibility;
+}
+button,input,select,textarea{font-family:inherit}
+
+.hero h1,.page-heading h1{font-size:34px;line-height:1.18;letter-spacing:-.025em}
+.signin-brand h1{font-size:42px;line-height:1.1;letter-spacing:-.025em}
+.signin-panel h2{font-size:30px}
+.policy-outcome h1{font-size:30px}
+.metric b,.metric-card b{font-size:26px}
+
+small{font-size:12px!important;line-height:1.45}
+table{font-size:13px}
+.eyebrow,.preview-label{font-size:12px!important}
+
+:is(
+  .top-actions b,.node small,.policy-sentence span,.score-ring small,
+  .request-detail div span,.user-menu small,.nav-badge,.role-chip,
+  .query-top-row label>span,.filter-step,.criterion-adder select,
+  .criterion-adder input,.criterion-adder button,.criterion-chip,
+  .validation-inline,.automation-route b,.outcome-path b,
+  .tracking-timeline b,.imported-flow-head b,.imported-flow-path b,
+  .policy-criteria-editor header p,.policy-criteria-row select,
+  .policy-criteria-row input,.add-condition-button,.enforcement-steps span,
+  .selection-count,.window-open,.window-fields label,.window-fields input,
+  .window-fields select,.demo-window,.ci-summary b,.change-reference b,
+  .change-reference span,.approval-row button,.backout-complete,
+  .selected-ci-list span,.row-enforce,.row-backout,.workload-change-bar>p,
+  .inline-window label,.inline-window input,.inline-window select,
+  .inline-window button,.change-ref-chip,.change-link,.request-status,
+  .table-action,.workflow-title p,.workflow-gates b,.workflow-gates i,
+  .workflow-gates strong
+){font-size:11px}
+
+:is(
+  .traffic-labels span,.decision-pill,.create-rule-button,.review-only,
+  .criterion-chip b,.ci-summary small,.ci-list span,
+  .workflow-guide .enforcement-steps small,.workflow-gates small,
+  .outcome-path small,.tracking-timeline small,.imported-flow-path small,
+  .imported-flow-path em
+){font-size:10px}
+
+@media(max-width:640px){
+  .hero h1,.page-heading h1{font-size:29px}
+  .signin-brand h1{font-size:36px}
+}
